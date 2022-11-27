@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('username');
             $table->string('email')->unique();
             $table->string('password');
+            $table->rememberToken();
+            $table->integer('expired_at')->nullable();
             $table->timestamps();
         });
     }
